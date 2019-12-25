@@ -8,6 +8,9 @@ from core.api import app
 from core.getter import Getter
 from core.tester import Tester
 
+# 是否记录日志
+print = logger.info if (RUN_TYPE == 1) else print
+
 
 class Scheduler():
     def schedule_tester(self, cycle=TESTER_CYCLE):

@@ -11,7 +11,11 @@ try:
 except:
     from aiohttp import ClientProxyConnectionError as ProxyConnectionError
 from db.redis_util import RedisClient
+
 from config import *
+
+# 是否记录日志
+print = logger.info if (RUN_TYPE == 1) else print
 
 
 class Tester(object):

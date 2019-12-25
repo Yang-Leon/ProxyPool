@@ -3,6 +3,11 @@
 import requests
 from requests.exceptions import ConnectionError
 
+from config import *
+
+# 是否记录日志
+print = logger.info if (RUN_TYPE == 1) else print
+
 base_headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36',
     'Accept-Encoding': 'gzip, deflate, sdch',

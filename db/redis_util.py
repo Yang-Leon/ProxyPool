@@ -5,8 +5,10 @@ from random import choice
 
 import redis
 
-from config import MAX_SCORE, MIN_SCORE, INITIAL_SCORE
-from config import REDIS_HOST, REDIS_PORT, REDIS_PASSWORD, REDIS_KEY
+from config import *
+
+# 是否记录日志
+print = logger.info if (RUN_TYPE == 1) else print
 
 
 class RedisClient(object):

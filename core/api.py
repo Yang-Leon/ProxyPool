@@ -2,7 +2,11 @@
 # -*- coding:utf-8 -*-
 from flask import Flask, g
 
+from config import *
 from db.redis_util import RedisClient
+
+# 是否记录日志
+print = logger.info if (RUN_TYPE == 1) else print
 
 __all__ = ['app']
 

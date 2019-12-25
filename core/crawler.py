@@ -2,7 +2,11 @@
 # -*- coding:utf-8 -*-
 import re
 
+from config import *
 from core.utils import get_page
+
+# 是否记录日志
+print = logger.info if (RUN_TYPE == 1) else print
 
 
 class ProxyMetaclass(type):
@@ -143,5 +147,3 @@ class Crawler(object, metaclass=ProxyMetaclass):
             for address, port in re_ip_address:
                 result = address + ':' + port
                 yield result.replace(' ', '')
-
-

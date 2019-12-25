@@ -6,6 +6,9 @@ from config import *
 from core.crawler import Crawler
 from db.redis_util import RedisClient
 
+# 是否记录日志
+print = logger.info if (RUN_TYPE == 1) else print
+
 
 class Getter():
     def __init__(self):
