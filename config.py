@@ -52,7 +52,7 @@ API_ENABLED = True
 BATCH_TEST_SIZE = 10
 
 # 运行类别：0：本地调试、不记录日志，1：服务器运行、记录日志
-RUN_TYPE = 0
+RUN_TYPE = 1
 
 
 # 配置日志模块
