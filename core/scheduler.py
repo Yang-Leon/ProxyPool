@@ -4,7 +4,7 @@ import time
 from multiprocessing import Process
 
 from config import *
-from core.api import app
+from proxypool.api import app
 from core.getter import Getter
 from core.tester import Tester
 
